@@ -137,7 +137,6 @@ static void omap_power_init(struct power_module *module) {
     sysfs_write(CPUFREQ_INTERACTIVE "go_hispeed_load", "50");
     sysfs_write(CPUFREQ_INTERACTIVE "above_hispeed_delay", "100000");
 
-    ALOGI("Initialized successfully");
     omap_device->inited = 1;
 }
 
@@ -165,15 +164,15 @@ static int boostpulse_open(struct omap_power_module *omap_device) {
 static void omap_power_set_interactive(struct power_module *module, int on) {
     struct omap_power_module *omap_device = (struct omap_power_module *) module;
 
+#if 0
+    /* Tuxafgmur Dhollmen - This code break OC kernels */
+
     if (!omap_device->inited)
         return;
 
-    /*
-     * Lower maximum frequency when screen is off.  CPU 0 and 1 share a
-     * cpufreq policy.
-     */
-
+    /* Lower maximum frequency when screen is off. CPU 0 and 1 share a cpufreq policy. */
     sysfs_write(CPUFREQ_CPU0 "scaling_max_freq", on ? max_freq : nom_freq);
+#endif
 }
 
 static void omap_power_hint(struct power_module *module, power_hint_t hint, void *data) {

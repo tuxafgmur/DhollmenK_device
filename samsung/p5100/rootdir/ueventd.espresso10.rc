@@ -56,3 +56,39 @@
 
 # For GCX
 /dev/gcioctl              0666   system     system
+
+/sys/devices/system/cpu/cpu* cpufreq/scaling_max_freq 		  0664  system  system
+/sys/devices/system/cpu/cpu* cpufreq/scaling_min_freq 		  0664  system  system
+/sys/devices/system/cpu/cpu* cpufreq/scaling_governor 		  0664  system  system
+
+/sys/devices/system/cpu/cpufreq pegasusq/cpu_down_freq            0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/cpu_down_rate            0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/cpu_up_freq              0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/cpu_up_rate              0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/down_differential        0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/dvfs_debug               0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/freq_for_responsiveness  0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/freq_step                0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_1_1         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_2_0         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_2_1         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_3_0         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_3_1         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_freq_4_0         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_lock             0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_1_1           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_2_0           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_2_1           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_3_0           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_3_1           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/hotplug_rq_4_0           0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/ignore_nice_load         0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/io_is_busy               0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/max_cpu_lock             0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/min_cpu_lock             0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/sampling_down_factor     0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/sampling_rate            0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/sampling_rate_min        0444  root    system
+/sys/devices/system/cpu/cpufreq pegasusq/up_nr_cpus               0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/up_threshold             0660  system  system
+/sys/devices/system/cpu/cpufreq pegasusq/up_threshold_at_min_freq 0660  system  system

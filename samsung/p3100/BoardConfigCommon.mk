@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,28 +11,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
-
+# This variable is set first, so it can be overridden by BoardConfigVendor.mk
 -include device/samsung/omap4-common/BoardConfigCommon.mk
 
 USE_CAMERA_STUB := true
 
-TARGET_ARCH := arm
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-TARGET_ARCH_VARIANT := armv7-a-neon
-ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
-
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-TARGET_BOARD_PLATFORM := omap4
 TARGET_BOARD_OMAP_CPU := 4430
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 
@@ -145,7 +131,3 @@ BOARD_CHARGER_RES := device/samsung/p3100/res/charger
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p31xx/BoardConfigVendor.mk
-
-# Bootanimation
-TARGET_SCREEN_HEIGHT := 1024
-TARGET_SCREEN_WIDTH := 600

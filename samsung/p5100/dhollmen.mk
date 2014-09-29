@@ -1,6 +1,6 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 # Copyright (C) 2014 SlimRoms Project
+# Copyright (C) 2014 Tuxafgmur - Dhollmen
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,10 +13,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/slim/config/gsm.mk)
+$(call inherit-product, vendor/dhollmen/config/gsm.mk)
+
+# Device have its own init.rc
+TARGET_PROVIDES_INIT_RC := true
 
 # Release name
 PRODUCT_RELEASE_NAME := p5100
@@ -25,23 +27,22 @@ PRODUCT_RELEASE_NAME := p5100
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 1280
 
-# Inherit some common Slim stuff.
-$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/dhollmen/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/p5100/full_p5100.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := p5100
-PRODUCT_NAME := slim_p5100
+PRODUCT_NAME := dhollmen_p5100
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P5100
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_MANUFACTURER := Samsung
 
 #Set build fingerprint / ID / Prduct Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=espresso10rfxx \
     TARGET_DEVICE=espresso10rf \
-    BUILD_FINGERPRINT="samsung/espresso10rfxx/espresso10rf:4.2.2/JDQ39/P5100XXDNA1:user/release-keys" \
-    PRIVATE_BUILD_DESC="espresso10rfxx-user 4.2.2 JDQ39 P5100XXDNA1 release-keys"
-
+    BUILD_FINGERPRINT="samsung/espresso10rfxx/espresso10rf:$(PLATFORM_VERSION)/$(BUILD_ID)/P5100XWALE2:user/release-keys" \
+    PRIVATE_BUILD_DESC="espresso10rfxx-user $(PLATFORM_VERSION) $(BUILD_ID) P5100XWALE2 release-keys"

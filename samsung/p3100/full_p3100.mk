@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -22,5 +20,5 @@ $(call inherit-product, device/samsung/p3100/p3100.mk)
 PRODUCT_NAME := full_p3100
 PRODUCT_DEVICE := p3100
 PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_MANUFACTURER := Samsung
 PRODUCT_MODEL := GT-P3100

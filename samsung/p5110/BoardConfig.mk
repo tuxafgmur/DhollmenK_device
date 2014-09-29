@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # Include p51xx BoardConfigCommon
 -include device/samsung/p5100/BoardConfigCommon.mk
@@ -21,7 +19,7 @@ TARGET_BOARD_INFO_FILE := device/samsung/p5110/board-info.txt
 
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/espresso10
-TARGET_KERNEL_CONFIG := slim_p5110_defconfig
+TARGET_KERNEL_CONFIG := dhollmen_P51XX_defconfig
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := p5110,GT-P5110,p5113,GT-P5113,espresso10wifi,espresso10wifixx

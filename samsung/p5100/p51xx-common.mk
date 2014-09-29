@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # Include omap4 common makefile
 $(call inherit-product, device/samsung/omap4-common/common.mk)
@@ -32,10 +30,12 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
     $(LOCAL_PATH)/rootdir/init.espresso10.usb.rc:root/init.espresso10.usb.rc \
     $(LOCAL_PATH)/rootdir/init.espresso10.rc:root/init.espresso10.rc \
     $(LOCAL_PATH)/rootdir/ueventd.espresso10.rc:root/ueventd.espresso10.rc \
-    $(LOCAL_PATH)/rootdir/fstab.espresso10:root/fstab.espresso10 \
+    $(LOCAL_PATH)/rootdir/busybox:root/sbin/busybox \
+    $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Audio
@@ -53,7 +53,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=180
 
 # Media profiles
 PRODUCT_COPY_FILES += \
