@@ -38,13 +38,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh \
     $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf
-
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
 # Wifi
