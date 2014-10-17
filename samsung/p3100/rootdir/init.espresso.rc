@@ -28,6 +28,9 @@ on init
 	symlink /storage/usbdisk0 /mnt/usbdisk0
 	symlink /storage/usbdisk0 /usbdisk0
 
+	mkdir /preload 0771 system system
+	symlink /preload /intSdCard
+
 	mkdir /dev/pipes 0771 shell shell
 
 	chmod 0777 /dev/ion
