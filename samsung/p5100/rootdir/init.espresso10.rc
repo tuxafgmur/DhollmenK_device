@@ -1,7 +1,7 @@
 # Samsung Tab2
 # Dhollmen
 
-import /init.espresso10.usb.rc
+import /init.usb.espresso10.rc
 
 on init
 	export ANDROID_CACHE /cache

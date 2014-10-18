@@ -31,8 +31,8 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
-    $(LOCAL_PATH)/rootdir/init.espresso.usb.rc:root/init.espresso.usb.rc \
     $(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
+    $(LOCAL_PATH)/rootdir/init.usb.espresso.rc:root/init.usb.espresso.rc \
     $(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
     $(LOCAL_PATH)/rootdir/busybox:root/sbin/busybox \
     $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh \
