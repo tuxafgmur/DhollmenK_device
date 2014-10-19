@@ -50,7 +50,8 @@ fi
 
 # recovery
 /dev/block/mmcblk0p5                                     /boot        emmc    defaults    recoveryonly
-/dev/block/mmcblk0p6                                     /recovery    emmc    defaults    recoveryonly' >> $STABFILE
+/dev/block/mmcblk0p6                                     /recovery    emmc    defaults    recoveryonly
+/dev/block/mmcblk1p1                                     /external_sd auto    defaults    recoveryonly' >> $STABFILE
 
 
 /sbin/busybox rm /sbin/fstab.sh
