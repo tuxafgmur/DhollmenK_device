@@ -27,10 +27,8 @@ else
 fi
 
 
-/sbin/busybox blkid -s TYPE /dev/block/mmcblk0p11 | /sbin/busybox grep -q f2fs
+/sbin/busybox blkid -s TYPE /dev/block/mmcblk0p11 | /sbin/busybox grep -q ext4
 if [ "$?" = "0" ]; then
-	echo '/dev/block/platform/omap/omap_hsmmc.1/by-name/HIDDEN     /preload     f2fs    noatime,nodiratime,nosuid,nodev,background_gc=off,inline_xattr,active_logs=2                           wait' >> $STABFILE
-else
 	echo '/dev/block/platform/omap/omap_hsmmc.1/by-name/HIDDEN     /preload     ext4    noatime,nodiratime,nosuid,nodev,barrier=0,noauto_da_alloc,journal_async_commit,data=writeback          wait,check' >> $STABFILE
 fi
 

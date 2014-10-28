@@ -44,23 +44,26 @@ static int camera_get_number_of_cameras(void);
 static int camera_get_camera_info(int camera_id, struct camera_info *info);
 
 static struct hw_module_methods_t camera_module_methods = {
-        open: camera_device_open
+        .open = camera_device_open,
 };
 
 camera_module_t HAL_MODULE_INFO_SYM = {
-    common: {
-         tag: HARDWARE_MODULE_TAG,
-         version_major: 1,
-         version_minor: 0,
-         id: CAMERA_HARDWARE_MODULE_ID,
-         name: "Espresso Camera Wrapper",
-         author: "The CyanogenMod Project",
-         methods: &camera_module_methods,
-         dso: NULL, /* remove compilation warnings */
-         reserved: {0}, /* remove compilation warnings */
+    .common = {
+         .tag = HARDWARE_MODULE_TAG,
+         .module_api_version = CAMERA_MODULE_API_VERSION_1_0,
+         .hal_api_version = HARDWARE_HAL_API_VERSION,
+         .id = CAMERA_HARDWARE_MODULE_ID,
+         .name = "Espresso Camera Wrapper",
+         .author = "The CyanogenMod Project",
+         .methods = &camera_module_methods,
+         .dso = NULL,
+         .reserved = {0},
     },
-    get_number_of_cameras: camera_get_number_of_cameras,
-    get_camera_info: camera_get_camera_info,
+    .get_number_of_cameras = camera_get_number_of_cameras,
+    .get_camera_info = camera_get_camera_info,
+    .set_callbacks = NULL,
+    .get_vendor_tag_ops = NULL,
+    .reserved = {0},
 };
 
 typedef struct wrapper_camera_device {
@@ -95,13 +98,10 @@ static char * camera_fixup_getparams(int id, const char * settings)
     params.unflatten(android::String8(settings));
 
     // fix params here
-    //params.set(android::CameraParameters::KEY_MIN_EXPOSURE_COMPENSATION, "-3");
-    //params.set(android::CameraParameters::KEY_MAX_EXPOSURE_COMPENSATION, "3");
 
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
 
-    ALOGD("%s: get parameters fixed up", __FUNCTION__);
     return ret;
 }
 
@@ -115,7 +115,6 @@ char * camera_fixup_setparams(int id, const char * settings)
     android::String8 strParams = params.flatten();
     char *ret = strdup(strParams.string());
 
-    ALOGD("%s: set parameters fixed up", __FUNCTION__);
     return ret;
 }
 
@@ -427,7 +426,7 @@ int camera_device_open(const hw_module_t* module, const char* name,
         memset(camera_ops, 0, sizeof(*camera_ops));
 
         camera_device->base.common.tag = HARDWARE_DEVICE_TAG;
-        camera_device->base.common.version = 0;
+	camera_device->base.common.version = CAMERA_DEVICE_API_VERSION_1_0;
         camera_device->base.common.module = (hw_module_t *)(module);
         camera_device->base.common.close = camera_device_close;
         camera_device->base.ops = camera_ops;
