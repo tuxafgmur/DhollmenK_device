@@ -17,6 +17,7 @@ $(call inherit-product, device/samsung/p5100/p51xx-common.mk)
 LOCAL_PATH := device/samsung/p5100
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+RECOVERY_PACKAGE_OVERLAYS := $(ANDROID_BUILD_TOP)/$(LOCAL_PATH)/overlay
 
 # Audio
 PRODUCT_COPY_FILES += \
