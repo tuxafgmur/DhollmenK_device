@@ -35,10 +35,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.usb.espresso10.rc:root/init.usb.espresso10.rc \
     $(LOCAL_PATH)/rootdir/ueventd.espresso10.rc:root/ueventd.espresso10.rc \
     $(LOCAL_PATH)/rootdir/busybox:root/sbin/busybox \
-    $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh \
-    $(LOCAL_PATH)/rootdir/init.recovery.espresso10.rc:root/init.recovery.espresso10.rc \
-    $(LOCAL_PATH)/rootdir/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
-    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh
+
+# Recovery files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/recovery/init.recovery.espresso10.rc:root/init.recovery.espresso10.rc \
+    $(LOCAL_PATH)/rootdir/recovery/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
+    $(LOCAL_PATH)/rootdir/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # GPS
 PRODUCT_COPY_FILES += \
