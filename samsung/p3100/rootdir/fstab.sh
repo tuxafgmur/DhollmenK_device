@@ -37,7 +37,6 @@ else
 	fi
 fi
 
-
 /sbin/busybox blkid -s TYPE /dev/block/mmcblk0p10 | /sbin/busybox grep -q f2fs
 if [ "$?" = "0" ]; then
 	echo '/dev/block/platform/omap/omap_hsmmc.1/by-name/DATAFS     /data        f2fs    noatime,nodiratime,nosuid,nodev,background_gc=off,inline_xattr,active_logs=2                           wait,encryptable=footer' >> 	$STABFILE
@@ -57,5 +56,5 @@ fi
 /dev/block/mmcblk1p1                                     /external_sd auto    defaults    recoveryonly' >> $STABFILE
 
 
-/sbin/busybox rm /sbin/fstab.sh
-/sbin/busybox rm /sbin/busybox
+[ "$1" != "recovery" ] && /sbin/busybox rm /sbin/fstab.sh
+[ "$1" != "recovery" ] && /sbin/busybox rm /sbin/busybox

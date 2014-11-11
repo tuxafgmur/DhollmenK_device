@@ -56,5 +56,5 @@ fi
 /dev/block/mmcblk1p1                                     /external_sd auto    defaults    recoveryonly' >> $STABFILE
 
 
-/sbin/busybox rm /sbin/fstab.sh
-/sbin/busybox rm /sbin/busybox
+[ "$1" != "recovery" ] && /sbin/busybox rm /sbin/fstab.sh
+[ "$1" != "recovery" ] && /sbin/busybox rm /sbin/busybox

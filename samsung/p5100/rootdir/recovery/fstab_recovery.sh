@@ -2,7 +2,7 @@
 # Copyright 2014 Tuxafgmur - Dhollmen
 
 STABFILE=/fstab.espresso10
-/sbin/fstab.sh
+/sbin/fstab.sh recovery
 cp -f $STABFILE /etc/recovery.fstab
 
 
