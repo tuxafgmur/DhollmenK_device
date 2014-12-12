@@ -24,6 +24,8 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 LOCAL_PATH := device/samsung/p5100
 
+PRODUCT_CHARACTERISTICS := tablet
+
 # Enable higher-res drawables while keeping mdpi as primary source
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
@@ -103,7 +105,40 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 
-PRODUCT_CHARACTERISTICS := tablet
+# Wallpapers
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wallpapers/wallpaper_01.jpg:system/media/wallpapers/wallpaper_01.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_01_small.jpg:system/media/wallpapers/wallpaper_01_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_02.jpg:system/media/wallpapers/wallpaper_02.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_02_small.jpg:system/media/wallpapers/wallpaper_02_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_03.jpg:system/media/wallpapers/wallpaper_03.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_03_small.jpg:system/media/wallpapers/wallpaper_03_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_04.jpg:system/media/wallpapers/wallpaper_04.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_04_small.jpg:system/media/wallpapers/wallpaper_04_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_05.jpg:system/media/wallpapers/wallpaper_05.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_05_small.jpg:system/media/wallpapers/wallpaper_05_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_06.jpg:system/media/wallpapers/wallpaper_06.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_06_small.jpg:system/media/wallpapers/wallpaper_06_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_07.jpg:system/media/wallpapers/wallpaper_07.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_07_small.jpg:system/media/wallpapers/wallpaper_07_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_08.jpg:system/media/wallpapers/wallpaper_08.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_08_small.jpg:system/media/wallpapers/wallpaper_08_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_09.jpg:system/media/wallpapers/wallpaper_09.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_09_small.jpg:system/media/wallpapers/wallpaper_09_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_10.jpg:system/media/wallpapers/wallpaper_10.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_10_small.jpg:system/media/wallpapers/wallpaper_10_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_11.jpg:system/media/wallpapers/wallpaper_11.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_11_small.jpg:system/media/wallpapers/wallpaper_11_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_12.jpg:system/media/wallpapers/wallpaper_12.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_12_small.jpg:system/media/wallpapers/wallpaper_12_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_13.jpg:system/media/wallpapers/wallpaper_13.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_13_small.jpg:system/media/wallpapers/wallpaper_13_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_14.jpg:system/media/wallpapers/wallpaper_14.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_14_small.jpg:system/media/wallpapers/wallpaper_14_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_15.jpg:system/media/wallpapers/wallpaper_15.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_15_small.jpg:system/media/wallpapers/wallpaper_15_small.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_16.jpg:system/media/wallpapers/wallpaper_16.jpg \
+    $(LOCAL_PATH)/wallpapers/wallpaper_16_small.jpg:system/media/wallpapers/wallpaper_16_small.jpg
 
 PRODUCT_PACKAGES += \
     librs_jni \
