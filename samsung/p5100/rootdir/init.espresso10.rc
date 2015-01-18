@@ -9,6 +9,7 @@ on init
 	export EMULATED_STORAGE_TARGET /storage/emulated
 	export EXTERNAL_STORAGE /storage/emulated/legacy
 	export SECONDARY_STORAGE /storage/sdcard1
+	export LD_PRELOAD /system/lib/libjhead.so
 	export VIBE_PIPE_PATH /dev/pipes
 
 	mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
@@ -52,8 +53,6 @@ on fs
 	setprop windowsmgr.max_events_per_sec 180
 	setprop ro.max.fling_velocity 8000
 
-	mount debugfs /sys/kernel/debug /sys/kernel/debug
-
 	restorecon /efs/.nv_core.bak
 	restorecon /efs/.nv_core.bak.md5
 	restorecon /efs/.nv_data.bak
@@ -68,8 +67,6 @@ on fs
 	restorecon /efs/nv_data.bin
 	restorecon /efs/nv_data.bin.md5
 	restorecon /efs/wifi/.mac.info
-
-	insmod /system/lib/modules/pvrsrvkm_sgx540_120.ko
 
 on post-fs-data
 	mkdir /data/media 0770 media_rw media_rw
