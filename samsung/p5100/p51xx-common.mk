@@ -64,10 +64,10 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/usr/keychars/espresso-gpio-keypad.kcm:system/usr/keychars/espresso-gpio-keypad.kcm \
-    $(LOCAL_PATH)/usr/keychars/sec_keyboard.kcm:system/usr/keychars/sec_keyboard.kcm \
-    $(LOCAL_PATH)/usr/keylayout/espresso-gpio-keypad.kl:system/usr/keylayout/espresso-gpio-keypad.kl \
-    $(LOCAL_PATH)/usr/keylayout/sec_keyboard.kl:system/usr/keylayout/sec_keyboard.kl
+    $(LOCAL_PATH)/tab2-common/usr/keychars/espresso-gpio-keypad.kcm:system/usr/keychars/espresso-gpio-keypad.kcm \
+    $(LOCAL_PATH)/tab2-common/usr/keychars/sec_keyboard.kcm:system/usr/keychars/sec_keyboard.kcm \
+    $(LOCAL_PATH)/tab2-common/usr/keylayout/espresso-gpio-keypad.kl:system/usr/keylayout/espresso-gpio-keypad.kl \
+    $(LOCAL_PATH)/tab2-common/usr/keylayout/sec_keyboard.kl:system/usr/keylayout/sec_keyboard.kl
 
 # Packages
 PRODUCT_PACKAGES += \
