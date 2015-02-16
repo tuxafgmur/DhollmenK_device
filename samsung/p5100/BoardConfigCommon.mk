@@ -80,8 +80,8 @@ BOARD_NO_APSME_ATTR              := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p5100/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p5100/bluetooth/vnd_espresso10.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/tab2-common/bluetooth/vnd.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/tab2-common/bluetooth
 
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
