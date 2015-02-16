@@ -129,7 +129,7 @@ TW_INCLUDE_JB_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
 
 # Charging mode
-BOARD_CHARGER_RES := device/samsung/p3100/res/charger
+BOARD_CHARGER_RES := device/samsung/p3100/rootdir/res/charger
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p31xx/BoardConfigVendor.mk
