@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-LOCAL_PATH := device/samsung/p3100
+LOCAL_PATH := device/samsung
 
 PRODUCT_CHARACTERISTICS := tablet
 
@@ -32,26 +32,26 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.rc:root/init.rc \
-    $(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
-    $(LOCAL_PATH)/rootdir/init.usb.espresso.rc:root/init.usb.espresso.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
-    $(LOCAL_PATH)/rootdir/busybox:root/sbin/busybox \
-    $(LOCAL_PATH)/rootdir/fstab.sh:root/sbin/fstab.sh
+    $(LOCAL_PATH)/p3100/rootdir/init.rc:root/init.rc \
+    $(LOCAL_PATH)/p3100/rootdir/init.espresso.rc:root/init.espresso.rc \
+    $(LOCAL_PATH)/p3100/rootdir/init.usb.espresso.rc:root/init.usb.espresso.rc \
+    $(LOCAL_PATH)/p3100/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
+    $(LOCAL_PATH)/p3100/rootdir/busybox:root/sbin/busybox \
+    $(LOCAL_PATH)/p3100/rootdir/fstab.sh:root/sbin/fstab.sh
 
 # Recovery files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/recovery/init.recovery.espresso.rc:root/init.recovery.espresso.rc \
-    $(LOCAL_PATH)/rootdir/recovery/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
-    $(LOCAL_PATH)/rootdir/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/p3100/rootdir/recovery/init.recovery.espresso.rc:root/init.recovery.espresso.rc \
+    $(LOCAL_PATH)/p3100/rootdir/recovery/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
+    $(LOCAL_PATH)/p3100/rootdir/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
+    $(LOCAL_PATH)/p3100/configs/gps.xml:system/etc/gps.xml
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/p3100/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
@@ -59,8 +59,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media profiles
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/p3100/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/p3100/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -112,38 +112,38 @@ PRODUCT_COPY_FILES += \
 
 # Wallpapers
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wallpapers/wallpaper_01.jpg:system/media/wallpapers/wallpaper_01.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_01_small.jpg:system/media/wallpapers/wallpaper_01_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_02.jpg:system/media/wallpapers/wallpaper_02.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_02_small.jpg:system/media/wallpapers/wallpaper_02_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_03.jpg:system/media/wallpapers/wallpaper_03.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_03_small.jpg:system/media/wallpapers/wallpaper_03_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_04.jpg:system/media/wallpapers/wallpaper_04.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_04_small.jpg:system/media/wallpapers/wallpaper_04_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_05.jpg:system/media/wallpapers/wallpaper_05.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_05_small.jpg:system/media/wallpapers/wallpaper_05_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_06.jpg:system/media/wallpapers/wallpaper_06.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_06_small.jpg:system/media/wallpapers/wallpaper_06_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_07.jpg:system/media/wallpapers/wallpaper_07.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_07_small.jpg:system/media/wallpapers/wallpaper_07_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_08.jpg:system/media/wallpapers/wallpaper_08.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_08_small.jpg:system/media/wallpapers/wallpaper_08_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_09.jpg:system/media/wallpapers/wallpaper_09.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_09_small.jpg:system/media/wallpapers/wallpaper_09_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_10.jpg:system/media/wallpapers/wallpaper_10.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_10_small.jpg:system/media/wallpapers/wallpaper_10_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_11.jpg:system/media/wallpapers/wallpaper_11.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_11_small.jpg:system/media/wallpapers/wallpaper_11_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_12.jpg:system/media/wallpapers/wallpaper_12.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_12_small.jpg:system/media/wallpapers/wallpaper_12_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_13.jpg:system/media/wallpapers/wallpaper_13.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_13_small.jpg:system/media/wallpapers/wallpaper_13_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_14.jpg:system/media/wallpapers/wallpaper_14.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_14_small.jpg:system/media/wallpapers/wallpaper_14_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_15.jpg:system/media/wallpapers/wallpaper_15.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_15_small.jpg:system/media/wallpapers/wallpaper_15_small.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_16.jpg:system/media/wallpapers/wallpaper_16.jpg \
-    $(LOCAL_PATH)/wallpapers/wallpaper_16_small.jpg:system/media/wallpapers/wallpaper_16_small.jpg
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_01.jpg:system/media/wallpapers/wallpaper_01.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_01_small.jpg:system/media/wallpapers/wallpaper_01_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_02.jpg:system/media/wallpapers/wallpaper_02.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_02_small.jpg:system/media/wallpapers/wallpaper_02_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_03.jpg:system/media/wallpapers/wallpaper_03.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_03_small.jpg:system/media/wallpapers/wallpaper_03_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_04.jpg:system/media/wallpapers/wallpaper_04.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_04_small.jpg:system/media/wallpapers/wallpaper_04_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_05.jpg:system/media/wallpapers/wallpaper_05.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_05_small.jpg:system/media/wallpapers/wallpaper_05_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_06.jpg:system/media/wallpapers/wallpaper_06.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_06_small.jpg:system/media/wallpapers/wallpaper_06_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_07.jpg:system/media/wallpapers/wallpaper_07.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_07_small.jpg:system/media/wallpapers/wallpaper_07_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_08.jpg:system/media/wallpapers/wallpaper_08.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_08_small.jpg:system/media/wallpapers/wallpaper_08_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_09.jpg:system/media/wallpapers/wallpaper_09.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_09_small.jpg:system/media/wallpapers/wallpaper_09_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_10.jpg:system/media/wallpapers/wallpaper_10.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_10_small.jpg:system/media/wallpapers/wallpaper_10_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_11.jpg:system/media/wallpapers/wallpaper_11.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_11_small.jpg:system/media/wallpapers/wallpaper_11_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_12.jpg:system/media/wallpapers/wallpaper_12.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_12_small.jpg:system/media/wallpapers/wallpaper_12_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_13.jpg:system/media/wallpapers/wallpaper_13.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_13_small.jpg:system/media/wallpapers/wallpaper_13_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_14.jpg:system/media/wallpapers/wallpaper_14.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_14_small.jpg:system/media/wallpapers/wallpaper_14_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_15.jpg:system/media/wallpapers/wallpaper_15.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_15_small.jpg:system/media/wallpapers/wallpaper_15_small.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_16.jpg:system/media/wallpapers/wallpaper_16.jpg \
+    $(LOCAL_PATH)/p3100/wallpapers/wallpaper_16_small.jpg:system/media/wallpapers/wallpaper_16_small.jpg
 
 PRODUCT_PACKAGES += \
     librs_jni \
