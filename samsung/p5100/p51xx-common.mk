@@ -51,20 +51,20 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/p5100/configs/gps.xml:system/etc/gps.xml
+    $(LOCAL_PATH)/tab2-common/configs/gps.xml:system/etc/gps.xml
+
+# Media profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/tab2-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/tab2-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/p5100/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/tab2-common/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=180
-
-# Media profiles
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/p5100/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/p5100/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
