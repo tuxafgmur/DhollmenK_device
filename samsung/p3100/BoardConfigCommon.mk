@@ -15,8 +15,6 @@
 # This variable is set first, so it can be overridden by BoardConfigVendor.mk
 -include device/samsung/omap4-common/BoardConfigCommon.mk
 
-USE_CAMERA_STUB := true
-
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
@@ -43,13 +41,14 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # External apps on SD
 TARGET_EXTERNAL_APPS = sdcard1
 
+# Camera
+USE_CAMERA_STUB := true
+COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
+
 # Egl
 BOARD_EGL_CFG := device/samsung/tab2-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
-
-# Camera
-COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 12
@@ -131,5 +130,5 @@ TW_MAX_BRIGHTNESS := 255
 # Charging mode
 BOARD_CHARGER_RES := device/samsung/p3100/rootdir/res/charger
 
-# Use the non-open-source parts, if they're present
+# Use the non-open-source parts
 -include vendor/samsung/p31xx/BoardConfigVendor.mk
