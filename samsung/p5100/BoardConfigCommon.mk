@@ -44,7 +44,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_EXTERNAL_APPS = sdcard1
 
 # Egl
-BOARD_EGL_CFG := device/samsung/p5100/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/tab2-common/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 
