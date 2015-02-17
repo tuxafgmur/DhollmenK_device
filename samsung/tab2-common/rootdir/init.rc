@@ -6,7 +6,7 @@ import /init.usb.rc
 import /init.${ro.hardware}.rc
 
 on early-init
-	write /proc/1/oom_score_adj -941
+	write /proc/1/oom_score_adj -1000
 	setcon u:r:init:s0
 	restorecon /adb_keys
 	start ueventd
@@ -23,7 +23,6 @@ on init
 	loglevel 3
 
 	symlink /system/etc /etc
-	symlink /sys/kernel/debug /d
 	symlink /system/vendor /vendor
 
 	chown system system /data

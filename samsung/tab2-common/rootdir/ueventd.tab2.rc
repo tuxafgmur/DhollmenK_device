@@ -1,61 +1,47 @@
-#for DSSCOMP
-/dev/dsscomp              0666   system     system
-/dev/tiler                0666   system     system
+# Samsung Tab2
+# Dhollmen
 
-#for SYSLINK
+/dev/accelirq             0660   system     system
+/dev/block/mmcblk0p4      0660   radio      radio
+/dev/block/mmcblk0p8      0660   radio      radio
+/dev/cdma_boot0           0660   radio      radio
+/dev/cdma_ipc0            0660   radio      radio
+/dev/cdma_ramdump0        0660   radio      radio
+/dev/cdma_rfs0            0660   radio      radio
+/dev/cdma_rmnet5          0660   radio      radio
+/dev/cdma_rmnet6          0660   radio      radio
+/dev/compassirq           0660   system     system
+/dev/dsscomp              0666   system     system
+/dev/gcioctl              0666   system     system
+/dev/hdcp                 0664   root       root
+/dev/i2c-4                0660   system     system
+/dev/lte_boot0            0660   radio      radio
+/dev/lte_ipc0             0660   radio      radio
+/dev/lte_ramdump0         0660   radio      radio
+/dev/lte_rfs0             0660   radio      radio
+/dev/lte_rmnet4           0660   radio      radio
+/dev/lte_spi              0660   radio      radio
+/dev/modem_br             0660   radio      radio
+/dev/mpu                  0660   system     system
+/dev/mpuirq               0660   system     system
+/dev/pvrsrvkm             0666   system     system
 /dev/rpmsg-omx0           0660   system     drmrpc
 /dev/rpmsg-omx1           0660   system     drmrpc
 /dev/rproc_user           0660   system     drmrpc
-/dev/tf_driver            0660   drmrpc     drmrpc
 /dev/tf_ctrl              0660   drmrpc     drmrpc
-
-#for Sensors
-/dev/mpu                  0660   system     system
-/dev/mpuirq               0660   system     system
-/dev/accelirq             0660   system     system
-/dev/compassirq           0660   system     system
+/dev/tf_driver            0660   drmrpc     drmrpc
+/dev/tiler                0666   system     system
 /dev/timerirq             0660   system     system
-/dev/i2c-4                0660   system     system
-
-#for HSPA RIL
+/dev/ttyGS0               0660   system     system
+/dev/ttyGS1               0660   radio      radio
+/dev/ttyO0                0660   system     radio
 /dev/umts_boot0           0660   radio      radio
 /dev/umts_boot1           0660   radio      radio
-/dev/umts_ipc0            0660   radio      radio
-/dev/umts_rfs0            0660   radio      radio
-/dev/block/mmcblk0p8      0660   radio      radio
-/dev/umts_ramdump0        0660   radio      radio
-/dev/umts_router          0660   radio      system
 /dev/umts_csd             0660   radio      system
-
-# hdcp
-/dev/hdcp                 0664   root       root
-
-# used by RIL and GPS
-/dev/ttyO0                0660   system     radio
-/dev/ttyGS0               0660   system     system
-
-# for LTE RIL
-/dev/cdma_boot0           0660   radio      radio
-/dev/lte_boot0            0660   radio      radio
-/dev/cdma_ipc0            0660   radio      radio
-/dev/lte_ipc0             0660   radio      radio
-/dev/cdma_rfs0            0660   radio      radio
-/dev/lte_rfs0             0660   radio      radio
-/dev/lte_spi              0660   radio      radio
-/dev/cdma_rmnet5          0660   radio      radio
-/dev/cdma_rmnet6          0660   radio      radio
-/dev/lte_rmnet4           0660   radio      radio
-/dev/ttyGS1               0660   radio      radio
-/dev/block/mmcblk0p4      0660   radio      radio
-/dev/modem_br             0660   radio      radio
-/dev/cdma_ramdump0        0660   radio      radio
-/dev/lte_ramdump0         0660   radio      radio
-
-# For SGX
-/dev/pvrsrvkm             0666   system     system
-
-# For GCX
-/dev/gcioctl              0666   system     system
+/dev/umts_ipc0            0660   radio      radio
+/dev/umts_ramdump0        0660   radio      radio
+/dev/umts_rfs0            0660   radio      radio
+/dev/umts_router          0660   radio      system
 
 /sys/devices/system/cpu/cpu* cpufreq/scaling_max_freq 		  0664  system  system
 /sys/devices/system/cpu/cpu* cpufreq/scaling_min_freq 		  0664  system  system
@@ -92,3 +78,21 @@
 /sys/devices/system/cpu/cpufreq pegasusq/up_nr_cpus               0660  system  system
 /sys/devices/system/cpu/cpufreq pegasusq/up_threshold             0660  system  system
 /sys/devices/system/cpu/cpufreq pegasusq/up_threshold_at_min_freq 0660  system  system
+
+/sys/devices/system/cpu/cpufreq ondemand/boostfreq                0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/boostpulse               0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/boosttime                0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/down_differential        0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/down_differential_multi_core  0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/ignore_nice_load         0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/input_boost              0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/io_is_busy               0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/optimal_freq             0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/powersave_bias           0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/sampling_down_factor     0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/sampling_rate            0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/sampling_rate_min        0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/sync_freq                0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/up_threshold             0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/up_threshold_any_cpu_load     0664  system  system
+/sys/devices/system/cpu/cpufreq ondemand/up_threshold_multi_core       0664  system  system

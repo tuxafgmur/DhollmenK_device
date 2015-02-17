@@ -32,18 +32,20 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/p3100/rootdir/init.rc:root/init.rc \
-    $(LOCAL_PATH)/p3100/rootdir/init.espresso.rc:root/init.espresso.rc \
-    $(LOCAL_PATH)/p3100/rootdir/init.usb.espresso.rc:root/init.usb.espresso.rc \
-    $(LOCAL_PATH)/p3100/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
-    $(LOCAL_PATH)/p3100/rootdir/busybox:root/sbin/busybox \
-    $(LOCAL_PATH)/p3100/rootdir/fstab.sh:root/sbin/fstab.sh
+    $(LOCAL_PATH)/p3100/rootdir/init.device.espresso.rc:root/init.device.espresso.rc \
+    $(LOCAL_PATH)/tab2-common/rootdir/init.rc:root/init.rc \
+    $(LOCAL_PATH)/tab2-common/rootdir/init.tab2.rc:root/init.espresso.rc \
+    $(LOCAL_PATH)/tab2-common/rootdir/init.usb.tab2.rc:root/init.usb.espresso.rc \
+    $(LOCAL_PATH)/tab2-common/rootdir/ueventd.tab2.rc:root/ueventd.espresso.rc \
+    $(LOCAL_PATH)/tab2-common/rootdir/fstab.empty:root/fstab.espresso \
+    $(LOCAL_PATH)/tab2-common/rootdir/busybox:root/sbin/busybox \
+    $(LOCAL_PATH)/tab2-common/rootdir/fstab.sh:root/sbin/fstab.sh
 
 # Recovery files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/p3100/rootdir/recovery/init.recovery.espresso.rc:root/init.recovery.espresso.rc \
-    $(LOCAL_PATH)/p3100/rootdir/recovery/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
-    $(LOCAL_PATH)/p3100/rootdir/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/tab2-common/rootdir/recovery/fstab_recovery.sh:recovery/root/sbin/fstab_recovery.sh \
+    $(LOCAL_PATH)/tab2-common/rootdir/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # GPS
 PRODUCT_COPY_FILES += \

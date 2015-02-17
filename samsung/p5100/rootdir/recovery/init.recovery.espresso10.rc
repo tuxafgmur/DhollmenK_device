@@ -8,4 +8,4 @@ on init
 	write /sys/class/android_usb/android0/iSerial ${ro.serialno}
 
 on fs
-	exec /sbin/fstab_recovery.sh
+	exec /sbin/fstab_recovery.sh espresso10

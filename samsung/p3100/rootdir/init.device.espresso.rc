@@ -1,0 +1,10 @@
+# Dhollmen
+
+on fs
+	exec /sbin/fstab.sh espresso
+	restorecon /fstab.espresso
+
+	mount_all /fstab.espresso
+
+on property:ro.product.model=GT-P3100
+	start cpboot-daemon

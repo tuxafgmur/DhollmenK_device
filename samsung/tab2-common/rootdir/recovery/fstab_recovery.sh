@@ -1,17 +1,16 @@
 #!/sbin/busybox sh
 # Copyright 2014 Tuxafgmur - Dhollmen
 
-STABFILE=/fstab.espresso
-/sbin/fstab.sh recovery
+STABFILE=/fstab.$1
+/sbin/fstab.sh $1 recovery
 cp -f $STABFILE /etc/recovery.fstab
-
 
 TRWFSTABFILE=/etc/twrp.fstab
 
-	echo '# Samsung Tab2
+	echo "# Samsung Tab2 - $1
 # Dhollmen
 
-# mount      fstype	device' > $TRWFSTABFILE
+# mount      fstype	device" > $TRWFSTABFILE
 
 /sbin/busybox blkid -s TYPE /dev/block/mmcblk0p9 | /sbin/busybox grep -q f2fs
 if [ "$?" = "0" ]; then

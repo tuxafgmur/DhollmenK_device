@@ -1,0 +1,18 @@
+# Samsung Tab2
+# Dhollmen
+
+#                                                        mnt_point    type    options & mnt_flags                                                                                 fs_mgr_flags
+/dev/block/platform/omap/omap_hsmmc.1/by-name/FACTORYFS  /system      ext4    ro,noatime,nodiratime,barrier=0                                                                     wait
+/dev/block/platform/omap/omap_hsmmc.1/by-name/EFS        /efs         ext4    noatime,nodiratime,nosuid,nodev,barrier=0                                                           wait,check
+/dev/block/platform/omap/omap_hsmmc.1/by-name/CACHE      /cache       ext4    noatime,nodiratime,nosuid,nodev,barrier=0,noauto_da_alloc,journal_async_commit,data=writeback       wait,check
+/dev/block/platform/omap/omap_hsmmc.1/by-name/HIDDEN     /preload     ext4    noatime,nodiratime,nosuid,nodev,barrier=0,noauto_da_alloc,journal_async_commit,data=writeback       wait,check
+/dev/block/platform/omap/omap_hsmmc.1/by-name/DATAFS     /data        ext4    noatime,nodiratime,nosuid,nodev,barrier=0,noauto_da_alloc,journal_async_commit,data=writeback       wait,check,encryptable=footer
+
+# vold-managed volumes
+/devices/platform/omap/omap_hsmmc.0/mmc_host/mmc1        auto         auto    defaults    voldmanaged=sdcard1:auto
+/devices/platform/omap/musb-omap2430/musb-hdrc/usb1      auto         auto    defaults    voldmanaged=usbdisk0:auto
+
+# recovery
+/dev/block/mmcblk0p5                                     /boot        emmc    defaults    recoveryonly
+/dev/block/mmcblk0p6                                     /recovery    emmc    defaults    recoveryonly
+/dev/block/mmcblk1p1                                     /external_sd auto    defaults    recoveryonly
