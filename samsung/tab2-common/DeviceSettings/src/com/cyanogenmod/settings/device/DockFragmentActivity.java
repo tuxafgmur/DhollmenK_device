@@ -52,8 +52,6 @@ public class DockFragmentActivity extends PreferenceFragment {
         String boxValue;
         String key = preference.getKey();
 
-        Log.w(TAG, "key: " + key);
-
         if (key.compareTo(DeviceSettings.KEY_USE_DOCK_AUDIO) == 0) {
             boxValue = (((CheckBoxPreference)preference).isChecked() ? "1" : "0");
             Intent i = new Intent("com.cyanogenmod.settings.SamsungDock");
