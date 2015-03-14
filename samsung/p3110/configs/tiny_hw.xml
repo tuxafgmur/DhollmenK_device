@@ -1,6 +1,6 @@
 <!-- TinyHAL configuration file for Samsung Galaxy Tab 2 - p3110 -->
-<tinyhal>
 
+<tinyhal>
 	<path>
 		<ctl name="IN1L ZC Switch" val="0"/>
 		<ctl name="IN1R ZC Switch" val="0"/>
@@ -71,7 +71,7 @@
 			<ctl name="DAC1 Volume" val="96"/>
 			<ctl name="Left Output Mixer DAC Volume" val="7"/>
 			<ctl name="Right Output Mixer DAC Volume" val="7"/>
-			<ctl name="Output Volume" val="61"/>
+			<ctl name="Output Volume" val="57"/>
 			<ctl name="Earpiece Volume" val="1"/>
 		</path>
 		<path name="off">
@@ -81,7 +81,7 @@
 			<ctl name="DAC1 Volume" val="96"/>
 			<ctl name="Left Output Mixer DAC Volume" val="7"/>
 			<ctl name="Right Output Mixer DAC Volume" val="7"/>
-			<ctl name="Output Volume" val="61"/>
+			<ctl name="Output Volume" val="57"/>
 			<ctl name="Earpiece Volume" val="1"/>
 		</path>
 	</device>
@@ -118,7 +118,7 @@
 			<ctl name="AIF1DAC1 Volume" val="96"/>
 			<ctl name="AIF1 Boost Volume" val="0"/>
 			<ctl name="DAC1 Volume" val="96"/>
-			<ctl name="Headphone Volume" val="61"/>
+			<ctl name="Headphone Volume" val="57"/>
 		</path>
 		<path name="off">
 			<ctl name="HP Switch" val="0"/>
@@ -126,7 +126,7 @@
 			<ctl name="AIF1DAC1 Volume" val="96"/>
 			<ctl name="AIF1 Boost Volume" val="0"/>
 			<ctl name="DAC1 Volume" val="96"/>
-			<ctl name="Headphone Volume" val="61"/>
+			<ctl name="Headphone Volume" val="57"/>
 		</path>
 	</device>
 
