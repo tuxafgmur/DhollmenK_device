@@ -51,16 +51,16 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/tab2-commom/configs/gps.xml:system/etc/gps.xml
+    $(LOCAL_PATH)/tab2-common/configs/gps.xml:system/etc/gps.xml
 
 # Media profiles
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/tab2-commom/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/tab2-commom/configs/media_profiles.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/tab2-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/tab2-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/tab2-commom/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/tab2-common/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
