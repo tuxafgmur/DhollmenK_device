@@ -1,1 +1,1 @@
-../tab2-common/squisher.txt
+../p3100/squisher.txt

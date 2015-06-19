@@ -15,8 +15,6 @@
 # HAL module implementation stored in
 # hw/<POWERS_HARDWARE_MODULE_ID>.<ro.hardware>.so
 
-ifneq ($(filter p3100 p5100,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -28,5 +26,3 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-endif

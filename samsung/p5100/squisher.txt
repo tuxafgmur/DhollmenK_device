@@ -1,1 +1,24 @@
-../tab2-common/squisher.txt
+# List of files to delete or rename on ota package to distribution package zip file
+# Copyright 2015 Tuxafgmur - Dhollmen
+
+# Files to delete from /system/{bin,etc,fonts .... xbin} directories
+DELETE_DEVICE_BINS=""
+DELETE_DEVICE_ETCS=""
+DELETE_DEVICE_FONTS=""
+DELETE_DEVICE_LIBS=""
+DELETE_DEVICE_LIBSHW="audio.primary.default.so camera.omap4.so camera.piranha.so power.default.so power.piranha.so"
+DELETE_DEVICE_MEDIA=""
+DELETE_DEVICE_VENDORLIBS=""
+DELETE_DEVICE_VENDORLIBSHW="hwcomposer.omap4.so"
+DELETE_DEVICE_XBINS=""
+
+# Pairs of files (orig --> dest) to rename on /system/{bin,etc,fonts .... xbin} directories
+RENAME_DEVICE_BINS=""
+RENAME_DEVICE_ETCS=""
+RENAME_DEVICE_FONTS=""
+RENAME_DEVICE_LIBS=""
+RENAME_DEVICE_LIBSHW="audio.primary.piranha.so audio.primary.default.so camera.vendor.piranha.so camera.omap4.so"
+RENAME_DEVICE_MEDIA=""
+RENAME_DEVICE_VENDORLIBS=""
+RENAME_DEVICE_VENDORLIBSHW=""
+RENAME_DEVICE_XBINS=""
